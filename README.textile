@@ -1,0 +1,9 @@
+h1. About
+
+This is an example how Rango can work as part of another framework. As you can see, the integration is really easy. Since Rango is very modular, you are not force to used anything else than what you really need.
+
+h1. Usage
+
+# Install gems from cache @gem bundle --cached@ (you have to have bundler installed)
+# Run Merb via @bin/merb@
+# See @http://localhost:4000@
