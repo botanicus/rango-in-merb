@@ -19,3 +19,4 @@ src/*
 gems/
 !gems/cache/
 merb_profile_results
+bin
