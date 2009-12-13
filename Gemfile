@@ -9,3 +9,8 @@ merb_gems_version = "1.1.0.pre"
 # Don't use json gem version lower than 1.1.7! Older versions has security bug!
 gem "json_pure", ">= 1.1.7", require_as: "json"
 gem "merb-core", merb_gems_version
+
+# Rango & its dependencies
+gem "tilt"
+gem "rango", require_as: "rango/mixins/rendering"
+gem "rubyexts", lib: nil
