@@ -16,7 +16,8 @@ src/*
 .hgignore
 .hg/*
 .svn/*
-gems/
-!gems/cache/
-merb_profile_results
+gems/gems
+gems/specifications
+gems/doc
+gems/environment.rb
 bin
