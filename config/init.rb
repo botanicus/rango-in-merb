@@ -1,7 +1,23 @@
 # Go to http://wiki.merbivore.com/pages/init-rb
 
+if RUBY_VERSION < "1.9.1"
+  abort "Don't forget that Rango requires at least Ruby 1.9.1!"
+end
+
+begin
+  require_relative "../gems/environment"
+rescue LoadError
+  abort "Don't forget to run gem bundle!"
+end
+Bundler.require_env(Merb.env)
+
 use_test :rspec
 use_template_engine :erb
+
+# Rango setup
+Tilt.register "erb", Tilt::ErubisTemplate # extension "erb" => erubis template
+Rango.logger = Merb.logger
+Rango::Template.template_paths = [File.join(Merb.root, "templates")]
 
 # Specify your dependencies in the Gemfile
 
