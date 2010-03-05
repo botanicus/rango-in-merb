@@ -17,7 +17,7 @@ use_template_engine :erb
 # Rango setup
 Tilt.register "erb", Tilt::ErubisTemplate # extension "erb" => erubis template
 Rango.logger = Merb.logger
-Rango::Template.template_paths = [File.join(Merb.root, "templates")]
+Rango::Template.template_paths.clear.push(File.join(Merb.root, "templates"))
 
 # Specify your dependencies in the Gemfile
 
